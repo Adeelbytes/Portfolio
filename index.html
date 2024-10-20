@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Home</title>
+    <!-- Link to Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* animation */
+        .animate-wave {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.134) 0%, rgba(255, 255, 255, 0.594) 50%, rgba(255, 255, 255, 0.134) 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: waveEffect 5s infinite;
+        }
+
+        @keyframes waveEffect {
+            0% {
+                background-position: 200% 50%;
+            }
+
+            100% {
+                background-position: -100% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 p-4 fixed w-full top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Portfolio title with SVG icon -->
+            <div class="text-lg font-bold flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m-3.09 6a4.48 4.48 0 006.18 0L15 7h2.25c.65 0 1.18.42 1.37 1.02l.86 2.94A3.5 3.5 0 0115.5 14H8.5a3.5 3.5 0 01-3.08-2.04l.86-2.94A1.5 1.5 0 017.75 7H10l.91 3z"/>
+                </svg>
+                My Portfolio
+            </div>
+
+            <!-- Main Navigation for larger screens -->
+            <ul id="menu" class="hidden md:flex space-x-6">
+                <li><a href="profile.html" class="hover:text-blue-300"><small>Profile</small></a></li>
+                <li><a href="gallery.html" class="hover:text-blue-300"><small>Gallery</small></a></li>
+                <li><a href="career.html" class="hover:text-blue-300"><small>Career Goals</small></a></li>
+                <li><a href="projects.html" class="hover:text-blue-300"><small>Projects</small></a></li>
+                <li><a href="skills.html" class="hover:text-blue-300"><small>Skills & Interests</small></a></li>
+                <li><a href="contact.html" class="hover:text-blue-300"><small>Contact Us</small></a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden flex-col items-center bg-gray-800 w-full text-center">
+            <li><a href="profile.html" class="block py-2 text-white hover:bg-gray-700">Profile</a></li>
+            <li><a href="gallery.html" class="block py-2 text-white hover:bg-gray-700">Gallery</a></li>
+            <li><a href="career.html" class="block py-2 text-white hover:bg-gray-700">Career Goals</a></li>
+            <li><a href="projects.html" class="block py-2 text-white hover:bg-gray-700">Projects</a></li>
+            <li><a href="skills.html" class="block py-2 text-white hover:bg-gray-700">Skills & Interests</a></li>
+            <li><a href="contact.html" class="block py-2 text-white hover:bg-gray-700">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Profile Picture and Introduction -->
+    <section class="h-screen flex items-center justify-center text-center bg-gray-900 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
+        
+            <!-- Profile Image -->
+            <div class="w-full md:w-1/2 flex justify-center items-center mt-10 md:mt-0">
+                <div class="relative">
+                    <img src="dp.jpg" alt="Profile Image" class="rounded-full w-48 h-48 md:w-60 md:h-60 border-4 border-blue-300 object-cover">
+                </div>
+            </div>
+
+
+            <!-- Text Introduction -->
+            <div class="w-full md:w-1/2 text-left px-6">
+                <p class="text-lg mb-4"><small>Hello, I'm</small></p>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-wave">Adeel</h1>
+                <h2 class="text-2xl md:text-3xl text-blue-300 mb-6">a Web Developer</h2>
+                <p class="text-gray-400 mb-6">
+                    I'm passionate about building interactive and responsive web experiences. Currently focused on mastering the MERN stack and expanding my skills in full-stack development.
+                </p>
+                <!-- Call to Action Buttons -->
+                <div class="flex space-x-4">
+                    <a href="contact.html" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300">Hire Me</a>
+                    <a href="profile.html" class="border border-blue-500 text-blue-500 px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white transition duration-300">Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4">
+        <div class="container mx-auto text-center text-sm text-gray-400">
+            © 2024 My Portfolio | Designed by Adeel
+        </div>
+    </footer>
+
+    <!-- Hamburger Menu -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

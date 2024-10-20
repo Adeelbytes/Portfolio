@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Projects</title>
+    <!-- Link to Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        /* a wave-like metallic shine animation */
+        .animate-wave {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.134) 0%, rgba(255, 255, 255, 0.594) 50%, rgba(255,255,255,.134) 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: waveEffect 5s infinite;
+        }
+
+        @keyframes waveEffect {
+            0% {
+                background-position: 200% 50%;
+            }
+            100% {
+                background-position: -100% 50%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 p-4 fixed w-full top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Portfolio title with SVG icon -->
+            <div class="text-lg font-bold flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m-3.09 6a4.48 4.48 0 006.18 0L15 7h2.25c.65 0 1.18.42 1.37 1.02l.86 2.94A3.5 3.5 0 0115.5 14H8.5a3.5 3.5 0 01-3.08-2.04l.86-2.94A1.5 1.5 0 017.75 7H10l.91 3z"/>
+                </svg>
+                My Portfolio
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="hover:text-blue-300"><small>Home</small></a></li>
+                <li><a href="profile.html" class="hover:text-blue-300"><small>Profile</small></a></li>
+                <li><a href="gallery.html" class="hover:text-blue-300"><small>Gallery</small></a></li>
+                <li><a href="career.html" class="hover:text-blue-300"><small>Career Goals</small></a></li>                
+                <li><a href="skills.html" class="hover:text-blue-300"><small>Skills & Interests</small></a></li>
+                <li><a href="contact.html" class="hover:text-blue-300"><small>Contact Us</small></a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden flex-col items-center bg-gray-800 w-full text-center">
+            <li><a href="index.html" class="block py-2 text-white hover:bg-gray-700">Home</a></li>
+            <li><a href="profile.html" class="block py-2 text-white hover:bg-gray-700">Profile</a></li>
+            <li><a href="gallery.html" class="block py-2 text-white hover:bg-gray-700">Gallery</a></li>
+            <li><a href="career.html" class="block py-2 text-white hover:bg-gray-700">Career Goals</a></li>
+            <li><a href="skills.html" class="block py-2 text-white hover:bg-gray-700">Skills & Interests</a></li>
+            <li><a href="contact.html" class="block py-2 text-white hover:bg-gray-700">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="pt-36 pb-36 px-5">
+        <div class="text-center mb-10">
+            <h1 class="text-6xl font-bold animate-wave">My Projects</h1>
+            <p class="text-gray-400 mt-2">A showcase of my work with descriptions and technologies used.</p>
+        </div>
+
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <!-- Project 1 -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-lg hover:opacity-75 transition duration-300 border-4 border-blue-300">
+                <img src="ecom.jpg" alt="Project 1 Screenshot" class="rounded-md mb-4 w-full h-48 object-cover">
+                <h2 class="text-xl font-bold mb-2">Responsive E-Commerce Store</h2>
+                <p class="text-gray-400 mb-2">An online store offering a fully responsive and user-friendly interface. The project includes product listings, shopping cart functionality, and user authentication.</p>
+                <p class="text-sm text-gray-500 mb-9">Technologies: React.js Node.js MongoDB Tailwind CSS</p>
+                <div class="flex space-x-4">
+                    <a href="https://github.com/Adeel-haider265" class="text-blue-400 hover:text-blue-300">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-lg hover:opacity-75 transition duration-300 border-4 border-blue-300">
+                <img src="chat.png" alt="Project 2 Screenshot" class="rounded-md mb-4 w-full h-48 object-cover">
+                <h2 class="text-xl font-bold mb-2"> Real-Time Chat Application</h2>
+                <p class="text-gray-400 mb-2">A secure real-time chat application that allows users to communicate in private or group conversations. The app supports instant messaging, media sharing, and notifications.</p>
+                <p class="text-sm text-gray-500 mb-4">Technologies: Socket.io Express.js React.js Firebase for authentication</p>
+                <div class="flex space-x-4">
+                    <a href="https://github.com/Adeel-haider265" class="text-blue-400 hover:text-blue-300">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-lg hover:opacity-75 transition duration-300 border-4 border-blue-300">
+                <img src="port.png" alt="Project 3 Screenshot" class="rounded-md mb-4 w-full h-48 object-cover">
+                <h2 class="text-xl font-bold mb-2"> Portfolio Website</h2>
+                <p class="text-gray-400 mb-2">A personal portfolio website designed to showcase projects, skills, and career goals. The site is fully responsive and features smooth animations and a dark theme.</p>
+                <p class="text-sm text-gray-500 mb-4">Technologies: HTML5 CSS3 (Tailwind CSS) JavaScript GitHub Pages for hosting</p>
+                <div class="flex space-x-4">
+                    <a href="https://github.com/Adeel-haider265" class="text-blue-400 hover:text-blue-300">GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4">
+        <div class="container mx-auto text-center text-sm text-gray-400">
+            © 2024 My Portfolio | Designed by Adeel
+        </div>
+    </footer>
+
+     <!-- Hamburger Menu -->
+     <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Personal Profile</title>
+    <!-- Link to Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* a wave-like metallic shine animation */
+    .animate-wave {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.134) 0%, rgba(255, 255, 255, 0.594) 50%, rgba(255,255,255,.134) 100%);
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: waveEffect 5s infinite;
+    }
+
+    @keyframes waveEffect {
+        0% {
+            background-position: 200% 50%;
+        }
+        100% {
+            background-position: -100% 50%;
+        }
+    }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 p-4 fixed w-full top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Portfolio title with SVG icon -->
+            <div class="text-lg font-bold flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m-3.09 6a4.48 4.48 0 006.18 0L15 7h2.25c.65 0 1.18.42 1.37 1.02l.86 2.94A3.5 3.5 0 0115.5 14H8.5a3.5 3.5 0 01-3.08-2.04l.86-2.94A1.5 1.5 0 017.75 7H10l.91 3z"/>
+                </svg>
+                My Portfolio
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="hover:text-blue-300"><small>Home</small></a></li>
+                <li><a href="gallery.html" class="hover:text-blue-300"><small>Gallery</small></a></li>
+                <li><a href="career.html" class="hover:text-blue-300"><small>Career Goals</small></a></li>
+                <li><a href="projects.html" class="hover:text-blue-300"><small>Projects</small></a></li>
+                <li><a href="skills.html" class="hover:text-blue-300"><small>Skills & Interests</small></a></li>
+                <li><a href="contact.html" class="hover:text-blue-300"><small>Contact Us</small></a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden flex-col items-center bg-gray-800 w-full text-center">
+            <li><a href="index.html" class="block py-2 text-white hover:bg-gray-700">Home</a></li>
+            <li><a href="gallery.html" class="block py-2 text-white hover:bg-gray-700">Gallery</a></li>
+            <li><a href="career.html" class="block py-2 text-white hover:bg-gray-700">Career Goals</a></li>
+            <li><a href="projects.html" class="block py-2 text-white hover:bg-gray-700">Projects</a></li>
+            <li><a href="skills.html" class="block py-2 text-white hover:bg-gray-700">Skills & Interests</a></li>
+            <li><a href="contact.html" class="block py-2 text-white hover:bg-gray-700">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="min-h-screen flex flex-col items-center justify-center bg-gray-900 px-4 pt-20 md:pt-40 -mt-24 mb-40">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
+        
+            <!-- Profile Image -->
+            <div class="w-full md:w-1/2 flex justify-center items-center mt-20 md:mt-0 -mb-8">
+                <div class="relative">
+                    <img src="dp.jpg" alt="Profile Image" class="rounded-full w-48 h-48 md:w-60 md:h-60 border-4 border-blue-300 object-cover">
+                </div>
+            </div>
+
+
+            <!-- Bio Section -->
+            <div class="w-full md:w-1/2 text-left pt-20 px-6 ">
+                <h1 class="text-4xl font-bold text-white mb-4 animate-wave">Adeel</h1>
+                <h2 class="text-2xl text-blue-300 mb-6">Web Developer & Software Engineer</h2>
+                <p class="text-gray-400 mb-4">
+                    I'm currently pursuing a degree in Software Engineering (5th semester). With a deep passion for web development, my primary goal is to build interactive and scalable web solutions using the MERN stack. 
+                </p>
+                <p class="text-gray-400 mb-4">
+                    My education has provided a solid foundation in coding, problem-solving, and various development tools. Apart from coding, I enjoy exploring new tech and improving my knowledge in fields like artificial intelligence and cloud computing.
+                </p>
+                <p class="text-gray-400">
+                    When I'm not coding, I love reading tech blogs, listening to music, and occasionally, gaming. I believe in continuous learning, and I’m always looking for new challenges to push my skills to the next level.
+                </p>
+
+               <!-- Social Links -->
+                <div class="flex justify-center space-x-6 mt-12">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com" target="_blank" class="flex items-center justify-center w-10 h-10 bg-gray-800 text-white rounded-full hover:bg-blue-500 transition duration-300 shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.72c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.72h-3v-5.62c0-3.36-4-3.1-4 0v5.62h-3v-10h3v1.41c1.4-2.58 7-2.77 7 2.47v6.12z"/>
+                        </svg>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/Adeel-haider265" target="_blank" class="flex items-center justify-center w-10 h-10 bg-gray-800 text-white rounded-full hover:bg-gray-600 transition duration-300 shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                            <path d="M12 0c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58 0-.28-.01-1.02-.02-2-3.34.72-4.04-1.61-4.04-1.61-.54-1.39-1.32-1.76-1.32-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.97 0-1.32.47-2.4 1.23-3.24-.12-.3-.53-1.54.12-3.21 0 0 1-.32 3.3 1.23.95-.27 1.98-.4 3-.41 1.02.01 2.05.14 3 .41 2.3-1.55 3.3-1.23 3.3-1.23.65 1.67.24 2.91.12 3.21.77.84 1.23 1.92 1.23 3.24 0 4.64-2.81 5.66-5.49 5.96.43.37.81 1.1.81 2.22 0 1.6-.02 2.88-.02 3.27 0 .32.22.7.83.58 4.76-1.6 8.2-6.1 8.2-11.39 0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com" target="_blank" class="flex items-center justify-center w-10 h-10 bg-gray-800 text-white rounded-full hover:bg-pink-500 transition duration-300 shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                            <path d="M12 0c-3.31 0-4.1.01-5.52.07-1.42.06-2.39.28-3.24.6a6.54 6.54 0 00-2.41 1.57 6.53 6.53 0 00-1.57 2.41c-.32.85-.54 1.82-.6 3.24-.06 1.42-.07 2.21-.07 5.52s.01 4.1.07 5.52c.06 1.42.28 2.39.6 3.24a6.54 6.54 0 001.57 2.41 6.54 6.54 0 002.41 1.57c.85.32 1.82.54 3.24.6 1.42.06 2.21.07 5.52.07s4.1-.01 5.52-.07c1.42-.06 2.39-.28 3.24-.6a6.54 6.54 0 002.41-1.57 6.53 6.53 0 001.57-2.41c.32-.85.54-1.82.6-3.24.06-1.42.07-2.21.07-5.52s-.01-4.1-.07-5.52c-.06-1.42-.28-2.39-.6-3.24a6.54 6.54 0 00-1.57-2.41 6.54 6.54 0 00-2.41-1.57c-.85-.32-1.82-.54-3.24-.6-1.42-.06-2.21-.07-5.52-.07zm0-2.12c3.35 0 4.18.01 5.63.08 1.47.07 2.48.32 3.37.68a8.58 8.58 0 013.1 2.1 8.58 8.58 0 012.1 3.1c.36.9.6 1.9.68 3.37.07 1.45.08 2.28.08 5.63s-.01 4.18-.08 5.63c-.07 1.47-.32 2.48-.68 3.37a8.58 8.58 0 01-2.1 3.1 8.58 8.58 0 01-3.1 2.1c-.9.36-1.9.6-3.37.68-1.45.07-2.28.08-5.63.08s-4.18-.01-5.63-.08c-1.47-.07-2.48-.32-3.37-.68a8.58 8.58 0 01-3.1-2.1 8.58 8.58 0 01-2.1-3.1c-.36-.9-.6-1.9-.68-3.37-.07-1.45-.08-2.28-.08-5.63s.01-4.18.08-5.63c.07-1.47.32-2.48.68-3.37a8.58 8.58 0 012.1-3.1 8.58 8.58 0 013.1-2.1c.9-.36 1.9-.6 3.37-.68 1.45-.07 2.28-.08 5.63-.08z"/>
+                            <path d="M12 5.88a6.12 6.12 0 100 12.24 6.12 6.12 0 000-12.24zm0 2.12a4 4 0 110 8 4 4 0 010-8zm6.4-3.24a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/>
+                        </svg>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com" target="_blank" class="flex items-center justify-center w-10 h-10 bg-gray-800 text-white rounded-full hover:bg-blue-500 transition duration-300 shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                            <path d="M22.67 0H1.33C.6 0 0 .6 0 1.33v21.33C0 23.4.6 24 1.33 24H12.8v-9.28H9.69v-3.62h3.1V8.47c0-3.06 1.87-4.73 4.6-4.73 1.31 0 2.43.1 2.75.14v3.19h-1.89c-1.49 0-1.78.71-1.78 1.74v2.29h3.56l-.46 3.62h-3.1V24h6.07C23.4 24 24 23.4 24 22.67V1.33C24 .6 23.4 0 22.67 0z"/>
+                        </svg>
+                    </a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4">
+        <div class="container mx-auto text-center text-sm text-gray-400">
+            © 2024 My Portfolio | Designed by Adeel
+        </div>
+    </footer>
+
+    
+
+    <!-- Hamburger Menu -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

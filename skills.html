@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Skills and Interests</title>
+    <!-- Link to Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom progress bar styles */
+        .progress-bar {
+            background-color: #4A5568; 
+            border-radius: 9999px;
+        }
+
+        .progress-fill {
+            background-color: #4FD1C5; 
+            height: 100%;
+            border-radius: 9999px;
+        }
+    </style>
+
+<style>
+    /* a wave-like metallic shine animation */
+    .animate-wave {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.134) 0%, rgba(255, 255, 255, 0.594) 50%, rgba(255,255,255,.134) 100%);
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: waveEffect 5s infinite;
+    }
+
+    @keyframes waveEffect {
+        0% {
+            background-position: 200% 50%;
+        }
+        100% {
+            background-position: -100% 50%;
+        }
+    }
+</style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 p-4 fixed w-full top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Portfolio title with SVG icon -->
+            <div class="text-lg font-bold flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m-3.09 6a4.48 4.48 0 006.18 0L15 7h2.25c.65 0 1.18.42 1.37 1.02l.86 2.94A3.5 3.5 0 0115.5 14H8.5a3.5 3.5 0 01-3.08-2.04l.86-2.94A1.5 1.5 0 017.75 7H10l.91 3z"/>
+                </svg>
+                My Portfolio
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="hover:text-blue-300"><small>Home</small></a></li>
+                <li><a href="profile.html" class="hover:text-blue-300"><small>Profile</small></a></li>
+                <li><a href="gallery.html" class="hover:text-blue-300"><small>Gallery</small></a></li>
+                <li><a href="career.html" class="hover:text-blue-300"><small>Career Goals</small></a></li>
+                <li><a href="projects.html" class="hover:text-blue-300"><small>Projects</small></a></li>
+                <li><a href="contact.html" class="hover:text-blue-300"><small>Contact Us</small></a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden flex-col items-center bg-gray-800 w-full text-center">
+            <li><a href="index.html" class="block py-2 text-white hover:bg-gray-700">Home</a></li>
+            <li><a href="profile.html" class="block py-2 text-white hover:bg-gray-700">Profile</a></li>
+            <li><a href="gallery.html" class="block py-2 text-white hover:bg-gray-700">Gallery</a></li>
+            <li><a href="career.html" class="block py-2 text-white hover:bg-gray-700">Career Goals</a></li>
+            <li><a href="projects.html" class="block py-2 text-white hover:bg-gray-700">Projects</a></li>
+            <li><a href="contact.html" class="block py-2 text-white hover:bg-gray-700">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Skills Section -->
+    <section class="pt-36 pb-24 px-5">
+        <div class="text-center mb-10">
+            <h1 class="text-6xl font-bold animate-wave">Skills</h1>
+            <p class="text-gray-400 mt-2">A list of my technical skills with proficiency levels.</p>
+        </div>
+
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            <!-- HTML Skill -->
+            <div class="relative">
+                <h2 class="text-xl font-bold mb-2">HTML</h2>
+                <div class="w-full h-4 bg-gray-800 relative group">
+                    <div class="w-11/12 h-full bg-blue-500 transition-all duration-300"></div> <!-- 92% proficiency -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-sm font-semibold text-white">92%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Skill -->
+            <div class="relative">
+                <h2 class="text-xl font-bold mb-2">CSS</h2>
+                <div class="w-full h-4 bg-gray-800 relative group">
+                    <div class="w-10/12 h-full bg-blue-500 transition-all duration-300"></div> <!-- 83% proficiency -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-sm font-semibold text-white">83%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JavaScript Skill -->
+            <div class="relative">
+                <h2 class="text-xl font-bold mb-2">JavaScript</h2>
+                <div class="w-full h-4 bg-gray-800 relative group">
+                    <div class="w-9/12 h-full bg-blue-500 transition-all duration-300"></div> <!-- 75% proficiency -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-sm font-semibold text-white">75%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- React Skill -->
+            <div class="relative">
+                <h2 class="text-xl font-bold mb-2">React</h2>
+                <div class="w-full h-4 bg-gray-800 relative group">
+                    <div class="w-8/12 h-full bg-blue-500 transition-all duration-300"></div> <!-- 66% proficiency -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-sm font-semibold text-white">66%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Node.js Skill -->
+            <div class="relative">
+                <h2 class="text-xl font-bold mb-2">Node.js</h2>
+                <div class="w-full h-4 bg-gray-800 relative group">
+                    <div class="w-7/12 h-full bg-blue-500 transition-all duration-300"></div> <!-- 58% proficiency -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-sm font-semibold text-white">58%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tailwind CSS Skill -->
+            <div class="relative">
+                <h2 class="text-xl font-bold mb-2">Tailwind CSS</h2>
+                <div class="w-full h-4 bg-gray-800 relative group">
+                    <div class="w-10/12 h-full bg-blue-500 transition-all duration-300"></div> <!-- 83% proficiency -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-sm font-semibold text-white">83%</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Interests Section -->
+    <section class="pb-36 px-5 bg-gray-900">
+        <div class="text-center mb-10">
+            <h1 class="text-6xl font-bold animate-wave">Interests</h1>
+            <p class="text-gray-400 mt-2">A few hobbies and things I enjoy in my free time.</p>
+        </div>
+
+        <div class="container mx-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <!-- Interest 1: Reading -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-2">Reading</h2>
+                <p class="text-gray-400">I enjoy reading fiction and non-fiction books. They allow me to explore new perspectives and ideas.</p>
+            </div>
+
+            <!-- Interest 2: Traveling -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-2">Traveling</h2>
+                <p class="text-gray-400">Exploring new places and cultures is a passion of mine. It gives me inspiration and expands my horizons.</p>
+            </div>
+
+            <!-- Interest 3: Coding Challenges -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-2">Coding Challenges</h2>
+                <p class="text-gray-400">I regularly participate in coding challenges on platforms like CodeWars and LeetCode to sharpen my problem-solving skills.</p>
+            </div>
+
+            <!-- Interest 4: Video Games -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-2">Video Games</h2>
+                <p class="text-gray-400">Gaming is one of my favorite pastimes, especially story-driven games that offer immersive experiences.</p>
+            </div>
+
+            <!-- Interest 5: Music -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-2">Music</h2>
+                <p class="text-gray-400">Music is a constant companion. I love discovering new genres and artists across the globe.</p>
+            </div>
+
+            <!-- Interest 6: Blogging -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-2">Blogging</h2>
+                <p class="text-gray-400">I write technical blogs to share knowledge and tutorials with the developer community.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4">
+        <div class="container mx-auto text-center text-sm text-gray-400">
+            © 2024 My Portfolio | Designed by Adeel
+        </div>
+    </footer>
+
+
+     <!-- Hamburger Menu -->
+     <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
