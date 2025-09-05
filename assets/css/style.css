@@ -48,19 +48,19 @@
   width: 50px !important;
   height: 50px !important;
   position: absolute;
-  top: 50%;
-  right: 15px;
+  top: 55%;
+  right: 30px;
   transform: translateY(-50%);
   z-index: 1000;
 }  .name-title {
     flex: 1;
     text-align: center;
-    margin-right: 60px; /* Space for profile pic */
+    margin-left: -20px; /* Shift title left to center between hamburger and dp */
+    margin-right: 0;
   }
   
   .button-collapse {
     position: absolute;
-    left: 15px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
