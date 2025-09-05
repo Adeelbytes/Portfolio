@@ -20,6 +20,53 @@
   height: auto;
 }
 
+/* Mobile profile picture styling */
+@media only screen and (max-width: 992px) {
+  .side-nav .logo {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .side-nav .profile-pic {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Mobile header layout */
+  .hide-on-large.only .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: 56px;
+  }
+  
+/* Mobile profile picture in header */
+.mobile-profile-pic {
+  width: 50px !important;
+  height: 50px !important;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}  .name-title {
+    flex: 1;
+    text-align: center;
+    margin-right: 60px; /* Space for profile pic */
+  }
+  
+  .button-collapse {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+}
+
 .tracker {
   /* visibility: hidden; */
   position: fixed;
