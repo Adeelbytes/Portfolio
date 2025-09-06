@@ -639,6 +639,20 @@ small {
     display: block;
     font-size: 14px;
   }
+  .mobile-profile-pic {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    z-index: 10;
+  }
+  .mobile-profile-pic img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 77, 64, 0.4);
+  }
   h3, .container {
     position: relative;
     top: 64px;
